@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    font-family: monospace;
+    cursor: crosshair;
+    overflow-y: scroll;
+}
+
+/* INSPECTOR */
+
+#inspector-container {
+    flex: 0 0 auto;
+    width: 200px;
+    position: relative;
+}
+
+#tooltip {
+    position: fixed;
+    top: 10px;
+    left: 10x;
+}
+
+#inspector {
+    max-height: 90vh;
+    position: sticky;
+    top: 5px;
+    padding-left: 10px;
+    border-left: 1px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-note {
+    margin-top: 5px;
+}
+
+.note {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.note textarea {
+    height: 4em;
+}
+
+#inspector-container .title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.25ch;
+}
+
+#inspector-container .notepad {
+    width: 100%;
+}
+
+/* CALENDAR */
+
+#calendar-container {
+    flex: 1 1 auto;
+}
+
+#timer {
+    font-size: 2em;
+}
+
+#calendar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.year {
+    display: flex;
+    flex-direction: row;
+    margin: 2px 4px;
+}
+
+.year-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.month {
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+}
+
+.week {
+    display: flex;
+    flex-direction: column;
+}
+
+.day {
+    width: 6px;
+    height: 6px;
+    border: 1px solid transparent;
+    border-left-color: black;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    display: block;
+}
+
+.day-active {
+    border-top-color: black;
+    border-bottom-color: black;
+}
+
+.week:last-of-type > .day-active {
+    border-right-color: black;
+}
+
+.day-active:hover {
+    background-color: #a881b3 !important;
+}
+
+.day-past {
+    background-color: #A5D6A7;
+}
+
+.day-current {
+    background-color: #7E57C2;
+}
+
+.day-future {
+    background-color: #9FA8DA;
+}
+
