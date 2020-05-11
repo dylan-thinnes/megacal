@@ -1,0 +1,12 @@
+<div class="year">
+    <div class="year-label">
+        $(echo "$1" | grep -o . | while read c; do echo "<div>$c</div>"; done)
+    </div>
+    $(
+        year=$1
+        echo $year > /dev/stderr
+        for month in {1..12}; do
+            ./r month.html $year $month
+        done
+    )
+</div>

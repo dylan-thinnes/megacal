@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>MEGACAL</title>
+        <link href="../../static/home.css" rel="stylesheet" />
+    </head>
+    <body>
+        MEGACAL
+        <div id="calendar">
+            $(
+                for yyyy in {2000..2100}; do
+                     ./r year.html $yyyy
+                done
+            )
+        </div>
+    </body>
+</html>

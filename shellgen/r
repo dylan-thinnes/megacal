@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+bash -c "echo \"\"\"`cat "$1"`\"\"\"" "$@"

@@ -1,0 +1,10 @@
+<div class="month">
+    $(
+        DAYS=$(./daysofmonth $1 $2)
+        ./r week.html $1 $2 1 7
+        ./r week.html $1 $2 2 7
+        ./r week.html $1 $2 3 7
+        ./r week.html $1 $2 4 7
+        ./r week.html $1 $2 5 $((DAYS % 7))
+    )
+</div>

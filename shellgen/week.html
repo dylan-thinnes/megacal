@@ -1,0 +1,11 @@
+<div class="week">
+    $(
+        DAYS=$4
+        for i in `seq 1 $DAYS`; do
+            echo "<div class='day day-active' data-year='$1' data-month='$2' data-day='$i' data-week="$3"></div>"
+        done
+        for i in `seq $DAYS 6`; do
+            echo "<div class='day'></div>"
+        done
+    )
+</div>

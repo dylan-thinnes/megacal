@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+YYYY=$1
+MM=$2
+
+DAYS=(1 31 28 31 30 31 30 31 31 30 31 30 31)
+
+DAYS[2]=$((28 + (YYYY % 4 == 0 && (YYYY % 100 != 0 || YYYY % 400 == 0))))
+
+echo ${DAYS[$MM]}
